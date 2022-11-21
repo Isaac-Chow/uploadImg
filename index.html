@@ -5,22 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        <img src="" alt="" id="icon">
         Image upload
     </title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
-    <p>Select images, they will be stored in your browser and will be displayed even after reload. Selecting big images
-        (&gt; 2MB) can crash your browser.</p>
-    <input type="file" id="file">
-    
-    
-    <p id="state">No images stored in your browser.</p>
-    <div id="list">
+    <div class="outer_cont">
+        <div class="inner_cont">
+
+            <section class="input_item">
+                <p class="caution">
+                    Select images, they will be stored in your browser and will
+                    be displayed even after reload. Selecting big images
+                    (&gt; 2MB) can crash your browser.
+                </p>
+                <br>
+                <input class="just_text" type="file" id="file">
+
+                <br>
+                <p class="just_text" >OR</p>
+                <br>
+                <br>
+                <label class="just_text" for="url_link">Enter a URL to an image</label><br>
+                <input class="just_text" id="url_link" name="url_link" type="text">
+
+                <button>Add Image</button>
+            </section>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="image_cont">
+                <span class="image_span">
+                    <section>
+                        <img class="icons" src="static/icons/animate.png" alt="">
+                        <img class="icons" src="static/icons/brand-image.png" alt="">
+                        <img class="icons" src="static/icons/dinner.png" alt="">
+                        <img class="icons" src="static/icons/facebook.png" alt="">
+                    </section>
+                    <section>
+                        <img class="icons" src="static/icons/hamburger.png" alt="">
+                        <img class="icons" src="static/icons/music.png" alt="">
+                        <img class="icons" src="static/icons/restaurant.png" alt="">
+                        <img class="icons" src="static/icons/whatsapp.png" alt="">
+                    </section>
+                </span>
+                <p id="state">No images stored in your browser.</p>
+                <div id="list">
+                </div>
+                
+                <a href="#" id="deleteImgs">Delete Images</a>
+            </div>
+
+        </div>
     </div>
     
-    <a href="#" id="deleteImgs">Delete Images</a>
+    
+    
     <script src="main.js"></script>
 
 </body>

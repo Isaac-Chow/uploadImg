@@ -40,6 +40,7 @@ function displayImgData(imgData){
     var span=document.createElement("span");
     span.innerHTML=`<img class="thumb" src="${imgData}">`;
     document.getElementById("list").insertBefore(span,null);
+    // addIcon(imgData);
 }
 
 function displayNumberOfImgs(){
@@ -59,6 +60,18 @@ function deleteImages(){
     displayNumberOfImgs()
     document.getElementById("list").innerHTML="";   
 }
+
+const iconLink = 'https://cdn-icons-png.flaticon.com/128/3706/3706340.png'
+
+function addIcon(iconLink){
+    var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+    link.type = 'image/png';
+    link.rel = 'shortcut icon';
+    link.href = iconLink;
+    document.getElementsByTagName('head')[0].appendChild(link);
+}
+
+addIcon(iconLink);
 
 document.getElementById("file").addEventListener("change", handleFileSelect, false);
 document.getElementById("deleteImgs").addEventListener("click", deleteImages);
